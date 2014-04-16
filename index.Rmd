@@ -1,0 +1,46 @@
+---
+title       : Slidify Demo  
+subtitle    : HTML 5 Slides from R Markdown
+author      : Jim Stephenson
+job         : Software Application Specialist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+github:
+  user: jimsteph
+  repo: slidifytest
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+--- .class #id 
+
+## Slide 2
+
+### testing
+* bullet 1
+* bullet 2
+
+---
+
+## Slide 3
+
+Animated List
+> 1. Point 1
+> 2. Point 2
+> 3. Point 3
+
+---
+
+## Motion Chart
+```{r echo = F, resluts = 'asis', message = F}
+require(googleVis)
+M1 = gvisMotionChart(Fruits, idvar = 'Fruit', timevar = "year")
+print(M1, tag = 'chart')
+```
